@@ -1,5 +1,5 @@
-#Promise Area (24Hours)
-<div class="ps-content-wrapper-v0">
+#Promise Area (24Hours) 
+<br>
 <p>In this challenge, use <em>Javascript Promises</em> to calculate the areas of various geometrical shapes. The shapes are square, rectangle, circle and triangle, and the area of each can be computed using these formulae:</p>
 
 <ul>
@@ -148,5 +148,4 @@ rectangle
 <p>In the above example, the input consists of the shape trapezium which is not a shape we require. Thus, the promise rejects everything and returns <em>[-1].</em></p>
 </div>
 </details>
-</details>
-</div>    
+</details>  
