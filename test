@@ -1,0 +1,31 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name default;
+	root /home/project;
+    index index.html;
+
+    location / {
+            try_files $uri $uri/  /frontend/index.html =404;
+            #add_header Cache-Control 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
+    }
+
+    location @missing {
+            rewrite ^ $scheme://$host/index.html permanent;
+    }
+
+    location /api/ {
+            try_files $uri $uri/ backend/index.php?/$args;
+    }
+
+    location ~ /\.ht {
+            deny all;
+    }
+
+    location ~ [^/]\.php(/|$) {
+            include snippets/fastcgi-php.conf;
+            fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}
