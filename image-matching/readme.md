@@ -1,5 +1,8 @@
 #Image Matching (48Hours)
 <br>
+For PHP, go to the php folder. Implement the countMatches method in index.php to pass all cases in test.php
+For Javascript, go to the javascript folder. Implement the countMatches method in index.js to pass all cases in test.js
+<br>
 Images are stored in the form of a grid. Image recognition is possible by comparing grids of two images and checking if they have any ```matching regions```.
 
 You are given two grids where each cell of the grids contains either a ```0``` or a ```1```. If two cells share a side then they are adjacent. Cells that contain ```1``` form a connected region if any cell of that region can be reached by moving through the adjacent cells that contain 1. 
