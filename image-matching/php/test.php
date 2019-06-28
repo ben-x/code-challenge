@@ -1,5 +1,5 @@
 <?php
-require('./index.php');
+require('./solomon.index.php');
 
 $cases = array();
 
@@ -52,5 +52,5 @@ foreach ($cases as $key => $value) {
 	}
 }
 
-printf('Passed: %s, Failed: %s', $pass, $fail);
+printf("Passed: %s, Failed: %s\n", $pass, $fail);
 ?>
